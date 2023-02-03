@@ -13,5 +13,5 @@ Pour commencer:
       CateNom varchar(50)
       )
      
-   
+   Pour charger les données dans sql server; il faut telecharger et insaller le Le pilote ODBC Driver 17 for SQL Server. 
     
