@@ -15,3 +15,23 @@ Pour commencer:
      
    Pour charger les données dans sql server; il faut telecharger et insaller le Le pilote ODBC Driver 17 for SQL Server. https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15
     
+METHODE DE CONNEXION A SQL SERVER:
+    1. import pyodbc (pip install pyodbc)
+    2. conn = pyodbc.connect("Driver={ODBC Driver 17 for SQL Server};"
+                      "Server=ASSIRI-LAPTOP;" //LE NOM DE VOTRE SERVER 
+                      "Database=dbScrapingETL;" // LE NOM DE VOTRE BD 
+                      "Trusted_Connection=yes;")
+      cursor = conn.cursor()
+    3. ## insertion des données dans sql server 
+for TagNom in Tags:
+    cursor.execute("INSERT INTO Tags (TagNom) VALUES (?)", TagNom)
+for CateNom in Categories:
+    cursor.execute("INSERT INTO Categories (CateNom) VALUES (?)", CateNom)
+for NomProd in Categories:
+    cursor.execute("INSERT INTO Produitss (NomProd) VALUES (?)", NomProd)
+conn.commit()
+NB/ il est possible de creer les tables directement dans cette parie avec la requete sql : CREATE DATABASE 
+    4. # Step 4: Close connection
+conn.close()
+
+  
