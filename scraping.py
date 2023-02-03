@@ -1,24 +1,4 @@
 # import requests
-# from bs4 import BeautifulSoup
-# # import urllib.request
-
-
-# url = 'https://www.jumia.ci/index/allcategories/'
-# BASE = "https://www.jumia.ci"
-
-# response = requests.get(url)
-# page = response.content
-# soup = BeautifulSoup(page, 'html.parser')
-# CateNom = []
-
-# div = soup.find_all('div', class_="col4 -pvm -bb")
-# for i  in div:
-#     Categories = i.find_all('Categories')
-#     for Categorie in Categories:
-#         if Categorie.find('a').get('href'):
-#             CateNom = Categorie.find('a').get('href')
-# print(Categories)
-
 import requests
 from bs4 import BeautifulSoup
 import pyodbc
