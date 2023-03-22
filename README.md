@@ -8,7 +8,7 @@ Pour commencer:
   . Creer d'abord sa base de données dans vôtre SGBD
   . il faut créer toutes ses tables dans sql à partir des réquêtes manuelles
   exemple : Table Tags
-    CREATE DATABASE Tags (
+    CREATE TABLE Tags (
       IdTag INT PRIMARY KEY NOT NULL IDENTITY(1,1), # IDENTITY pour auto incrementer les ID de chaque tag
       TagNom varchar(150)
       )
